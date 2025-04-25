@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bright & Success Logistics</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: url('bg.png') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 50px 20px;
+      min-height: 100vh;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .subheading {
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
+
+    .qr-codes {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 30px 0;
+    }
+
+    .qr-codes img {
+      width: 120px;
+      height: 120px;
+    }
+
+    .contact {
+      font-size: 1rem;
+      margin-top: 30px;
+    }
+
+    .email, .phone {
+      margin: 5px 0;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .qr-codes {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1>BRIGHT & SUCCESS</h1>
+    <div class="subheading">GROUPAGE: 175 USD/CBM</div>
+    <div class="subheading">YIWU, CHINA → ROMANIA</div>
+    <div class="subheading">FAST SERVICE - 40 DAYS</div>
+
+    <p class="subheading">Connecting the World, Delivering the Future</p>
+    <p class="subheading">Conectand lumea, livrand viitorul</p>
+
+    <div class="qr-codes">
+      <div>
+        <img src="wechat-qr.jpg" alt="WeChat QR" />
+        <p>WeChat</p>
+      </div>
+      <div>
+        <img src="whatsapp-qr.jpg" alt="WhatsApp QR" />
+        <p>WhatsApp</p>
+      </div>
+    </div>
+
+    <div class="contact">
+      <p class="email">📧 meihangtransport@gmail.com</p>
+      <p class="phone">📞 0724 222662</p>
+    </div>
+  </div>
+</body>
+</html>
