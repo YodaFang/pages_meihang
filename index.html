@@ -2,89 +2,159 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bright & Success Logistics</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+
   <style>
     body {
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
       background: url('bg.png') no-repeat center center/cover;
       color: white;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     .overlay {
       background-color: rgba(0, 0, 0, 0.5);
-      padding: 50px 20px;
-      min-height: 100vh;
+      padding: 10px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+      margin: auto 0; /* 主要内容垂直居中 */
+    }
+
+    .bottom-content {
+      margin-top: auto; /* 将底部内容推到最下方 */
+      padding-bottom: 10px;
+    }
+
+    h1, h2, h3, p {
+      color: #ffffff;
     }
 
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
+      font-size: 3rem;
+      margin: 0;
+      line-height: 1.2;
     }
 
-    .subheading {
-      font-size: 1.2rem;
-      margin: 10px 0;
+    h2 {
+      font-size: 2rem;
+      margin: 0.5rem 0;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin: 0.5rem 0;
     }
 
     .qr-codes {
       display: flex;
       justify-content: center;
-      gap: 30px;
-      margin: 30px 0;
+      gap: 60px;
+      margin: 20px 0;
+      flex-wrap: wrap;
     }
 
     .qr-codes img {
       width: 120px;
       height: 120px;
+      border-radius: 10px;
+    }
+    .logo {
+      max-width: 115px;
     }
 
-    .contact {
-      font-size: 1rem;
-      margin-top: 30px;
+    .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2rem;
+      padding-top: 10px;
     }
 
-    .email, .phone {
-      margin: 5px 0;
+    .container {
+      margin-bottom: 2rem;
+    }
+
+    .logo-text {
+      margin-left: 1rem;
+    }
+
+    .company-name {
+      font-size: 1.2rem;
+      margin-top: 0.2rem;
     }
 
     @media (max-width: 600px) {
-      h1 {
-        font-size: 2rem;
-      }
-      .qr-codes {
+      .logo-container {
         flex-direction: column;
+        padding-top: 5px;
+      }
+      .logo-text {
+        margin-left: 0;
+        margin-top: 1rem;
       }
     }
   </style>
 </head>
+
 <body>
   <div class="overlay">
-    <h1>BRIGHT & SUCCESS</h1>
-    <div class="subheading">GROUPAGE: 175 USD/CBM</div>
-    <div class="subheading">YIWU, CHINA → ROMANIA</div>
-    <div class="subheading">FAST SERVICE - 40 DAYS</div>
-
-    <p class="subheading">Connecting the World, Delivering the Future</p>
-    <p class="subheading">Conectand lumea, livrand viitorul</p>
-
-    <div class="qr-codes">
-      <div>
-        <img src="wechat-qr.jpg" alt="WeChat QR" />
-        <p>WeChat</p>
-      </div>
-      <div>
-        <img src="whatsapp-qr.jpg" alt="WhatsApp QR" />
-        <p>WhatsApp</p>
+    <!-- 顶部logo -->
+    <div class="logo-container">
+      <img src="logo.png" alt="Bright & Success Logo" class="logo" />
+      <div class="logo-text">
+        <h1>裕辉德成</h1>
+        <div class="company-name">BRIGHT & SUCCESS</div>
       </div>
     </div>
+    
+    <!-- 主要内容居中 -->
+    <main class="container">
+      <h3>GROUPAGE: 175 USD/CBM</h3>
+      <h3>YIWU, CHINA → ROMANIA</h3>
+      <h3>FAST SERVICE - 40 DAYS</h3>
+    </main>
 
-    <div class="contact">
-      <p class="email">📧 meihangtransport@gmail.com</p>
-      <p class="phone">📞 0724 222662</p>
+    <!-- 底部内容 -->
+    <div class="bottom-content">
+      <p>Connecting the World, Delivering the Future</p>
+      <p>Conectand lumea, livrand viitorul</p>
+      <section class="qr-codes">
+        <div>
+          <img src="qr.png" alt="WeChat QR" />
+          <p>WeChat</p>
+        </div>
+        <div>
+          <img src="qr.png" alt="WhatsApp QR" />
+          <p>WhatsApp</p>
+        </div>
+      </section>
+
+      <section class="contact">
+        <p>
+          <svg style="width:16px;height:16px;vertical-align:-2px;fill:white;margin-right:8px" viewBox="0 0 24 24">
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>
+          meihangtransport@gmail.com
+        </p>
+        <p>
+          <svg style="width:16px;height:16px;vertical-align:-2px;fill:white;margin-right:8px" viewBox="0 0 24 24">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+          </svg>
+          0724 222662
+        </p>
+      </section>
     </div>
   </div>
 </body>
